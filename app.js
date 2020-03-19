@@ -20,21 +20,41 @@ function playerAttack(result) {
   if (result == 'slap'){
    computer.health = (computer.health - 10)
   //  console.log(computer.health)
-  let healthBar = document.getElementById("computer-health")
-  healthBar.setAttribute("style", `width:${computer.health}%;`)
+  let comHealthBar = document.getElementById("computer-health")
+  comHealthBar.setAttribute("style", `width:${computer.health}%;`)
   }
   if (result == 'kick'){
    computer.health = (computer.health - 15)
-   let healthBar = document.getElementById("computer-health")
-   healthBar.setAttribute("style", `width:${computer.health}%;`)
+   let comHealthBar = document.getElementById("computer-health")
+   comHealthBar.setAttribute("style", `width:${computer.health}%;`)
   //  console.log(computer.health)
   }
   if (result == 'punch'){
    computer.health = (computer.health - 20)
-   let healthBar = document.getElementById("computer-health")
-   healthBar.setAttribute("style", `width:${computer.health}%;`)
+   let comHealthBar = document.getElementById("computer-health")
+   comHealthBar.setAttribute("style", `width:${computer.health}%;`)
   //  console.log(computer.health)
   }
+  randomComputerAttack()
  }
 
- 
+function randomComputerAttack(){
+  let keys = Object.keys(computer.attacks)
+  let computerChoiceIndex = Math.floor(Math.random()* keys.length)
+  let computerChoice = keys[computerChoiceIndex]
+  if (computerChoice == 'slap') {
+    player.health = (player.health -10)
+    let playHealthBar = document.getElementById("player-health")
+    playHealthBar.setAttribute("style",`width:${player.health}%;` )
+  }
+  if (computerChoice == 'slap') {
+    player.health = (player.health -10)
+    let playHealthBar = document.getElementById("player-health")
+    playHealthBar.setAttribute("style",`width:${player.health}%;` )
+  }
+  if (computerChoice == 'slap') {
+    player.health = (player.health -10)
+    let playHealthBar = document.getElementById("player-health")
+    playHealthBar.setAttribute("style",`width:${player.health}%;` )
+  }
+}
