@@ -61,6 +61,13 @@ function playerWins(){
   document.getElementById("alert-bar-2").innerHTML = /*html*/ `<h1>Computer Loses!</h1>`
   document.getElementById("player-wins").innerText = player.wins.toString()
   document.getElementById("computer-losses").innerText = computer.losses.toString()
+  // @ts-ignore
+  document.getElementById('btn-clickable').disabled = true
+  // @ts-ignore
+  document.getElementById('btn-clickable-2').disabled = true
+  // @ts-ignore
+  document.getElementById('btn-clickable-3').disabled = true
+
 }
 // NOTE
 // Script to execute when computer wins (player health = 0)
@@ -85,6 +92,12 @@ function resetGame(){
   computer.health = 100;
   let comHealthBar = document.getElementById("computer-health")
   comHealthBar.setAttribute("style", `width:${computer.health}%;`)
+  // @ts-ignore
+  document.getElementById('btn-clickable').disabled = false
+  // @ts-ignore
+  document.getElementById('btn-clickable-2').disabled = false
+  // @ts-ignore
+  document.getElementById('btn-clickable-3').disabled = false
 }
 // NOTE
 // Script to select a random computer attack
@@ -97,18 +110,21 @@ function randomComputerAttack(){
   if (computerChoice == 'slap') {
     player.health = (player.health - 10)
     document.getElementById("alert-bar-2").innerHTML = /*html*/ `<h1>The Computer slapped YOU for 10 damage!</h1>`
+    // document.getElementById("btn-comp-1").classList.add("active")
     let playHealthBar = document.getElementById("player-health")
     playHealthBar.setAttribute("style",`width:${player.health}%;` )
   }
   if (computerChoice == 'kick') {
     player.health = (player.health - 15)
     document.getElementById("alert-bar-2").innerHTML = /*html*/ `<h1>The Computer kicked YOU for 15 damage!</h1>`
+    // document.getElementById("btn-comp-2").classList.add("active")
     let playHealthBar = document.getElementById("player-health")
     playHealthBar.setAttribute("style",`width:${player.health}%;` )
   }
   if (computerChoice == 'punch') {
     player.health = (player.health - 20)
     document.getElementById("alert-bar-2").innerHTML = /*html*/ `<h1>The Computer punched YOU for 20 damage!</h1>`
+    // document.getElementById("btn-comp-3").classList.add("active")
     let playHealthBar = document.getElementById("player-health")
     playHealthBar.setAttribute("style",`width:${player.health}%;` )
   }
