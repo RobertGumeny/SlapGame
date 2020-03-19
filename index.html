@@ -25,17 +25,17 @@
           <div class="card text-center">
             <div class="card-header">
               <h3>Player</h3>
-              <div class="progress">
-                <div class="progress-bar w-100 bg-success" role="progressbar"></div>
+              <div class="progress player-health-bar" id="player-health">
+                <div class="progress-bar w-100 bg-success" role="progressbar">100%</div>
               </div>
             </div>
             <div class="card-body d-flex justify-content-center">
               <img src="https://picsum.photos/200" alt="">
             </div>
             <div class="card-footer">
-              <button class="btn btn-primary" onclick="playerAttack('slap')">Slap</button>
-              <button class="btn btn-primary" onclick="playerAttack('kick')">Kick</button>
-              <button class="btn btn-primary" onclick="playerAttack('punch')">Punch</button>
+              <button onclick="playerAttack('slap')" class="btn btn-primary">Slap</button>
+              <button onclick="playerAttack('kick')" class="btn btn-primary">Kick</button>
+              <button onclick="playerAttack('punch')" class="btn btn-primary">Punch</button>
             </div>
           </div>
         </div>
@@ -43,8 +43,8 @@
           <div class="card text-center">
             <div class="card-header">
               <h3>Computer</h3>
-              <div class="progress">
-                <div class="progress-bar w-100 bg-success" role="progressbar"></div>
+              <div class="progress computer-health-bar" id="computer-health">
+                <div class="progress-bar w-100 bg-success" role="progressbar">100%</div>
               </div>
             </div>
             <div class="card-body d-flex justify-content-center">
@@ -66,5 +66,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
   </body>
 </html>

@@ -19,14 +19,19 @@ let computer = {
 function playerAttack(result) {
   if (result == 'slap'){
    computer.health = (computer.health - 10)
-   console.log(computer.health)
+  //  console.log(computer.health)
+  document.getElementById("computer-health").innerHTML = (computer.health)
   }
   if (result == 'kick'){
    computer.health = (computer.health - 15)
-   console.log(computer.health)
+   document.getElementById("computer-health").innerHTML = (computer.health)
+  //  console.log(computer.health)
   }
   if (result == 'punch'){
    computer.health = (computer.health - 20)
-   console.log(computer.health)
+   document.getElementById("computer-health").innerHTML = (computer.health)
+  //  console.log(computer.health)
   }
  }
+
+ 
